@@ -18,7 +18,9 @@ mongoose.set("strictQuery", true);
 //   .then(() => console.log("DB is connected..."))
 //   .catch((error) => console.log(error));
 mongoose
-  .connect(DB)
+  .connect(DB,{
+      useNewUrlParser: true 
+   })
   .then(() => console.log("DB is connected..."))
   .catch((error) => console.log(error));
 
